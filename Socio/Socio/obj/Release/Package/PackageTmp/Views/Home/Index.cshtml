@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+   
+</div>
+
+@if (Request.IsAuthenticated)
+{
+    <div>
+        <h2>Bienvenido</h2>
+       @Html.ActionLink("Ver detalles","Index","Usuario")
+
+    </div>
+}
+else
+{
+    <h2>Debe registrarse para poder acceder</h2>
+   
+}
